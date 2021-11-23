@@ -21,20 +21,20 @@ myRequestObject.send();
 function displayPage() {
 
   var headline = document.createElement('span');
-  var headlineText = document.createTextNode("Here's what's in the news week: ");
+  var headlineText = document.createTextNode("Most Viewed Articles for the Last Seven Days:");
   headline.appendChild(headlineText);
   document.body.appendChild(headline);
   headline.style.fontSize = "1.7em";
   headline.style.fontWeight = "bold";
   headline.style.color = "rgb(30,30,30)"
 
-  var todaysDate = document.createElement('span');
-  var todaysDateText = document.createTextNode(new Date().toString().substr(0, 15));
-  todaysDate.appendChild(todaysDateText);
-  document.body.appendChild(todaysDate);
-  todaysDate.style.fontSize = "1.7em";
-  todaysDate.style.fontWeight = "bold";
-  todaysDate.style.color = "rgb(159,182,205)";
+  //var todaysDate = document.createElement('span');
+  //var todaysDateText = document.createTextNode(new Date().toString().substr(0, 15));
+  //todaysDate.appendChild(todaysDateText);
+  //document.body.appendChild(todaysDate);
+  //todaysDate.style.fontSize = "1.7em";
+  //todaysDate.style.fontWeight = "bold";
+  //todaysDate.style.color = "rgb(159,182,205)";
 
   var list = document.createElement('ol');
   for (let i = 0; i < 10; i++) {
@@ -51,7 +51,7 @@ function displayPage() {
     for (let i = 0; i < lis.length; i++) {
       // var li = document.createElement('li');
       let a = document.createElement('a')
-      a.setAttribute('href', 'data.results[i].url');
+      //a.setAttribute('href', 'data.results[i].url');
       lis[i].appendChild(a);
       let aText = document.createTextNode(data.results[i].title);
       a.appendChild(aText)
